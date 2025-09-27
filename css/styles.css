@@ -1,9 +1,10 @@
 /* === Base Reset === */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0d1b2a; /* Dark navy */
   color: #f8f9fa;
   font-size: 18px; /* Slightly larger for readability */
@@ -80,7 +81,8 @@ ul {
 }
 
 /* === Sign-Up Form === */
-.sign-up-form, .log-in-form {
+.sign-up-form,
+.log-in-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -91,7 +93,8 @@ ul {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.sign-up-form button[type="submit"], .log-in-form button[type="submit"] {
+.sign-up-form,
+.log-in-form {
   background-color: #1b4332;
   color: white;
   font-weight: bold;
@@ -99,7 +102,19 @@ ul {
   border: none;
   border-radius: 5px;
   padding: 14px;
-  cursor: pointer;
+}
+
+button[type="submit"],
+button[type="submit"] {
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #ccc; /* gray out */
+  cursor: not-allowed; /* change cursor */
+  opacity: 0.6; /* fade */
 }
 
 .sign-up-form button[type="submit"]:hover {
@@ -110,7 +125,16 @@ ul {
 .error {
   color: #ff4d4d;
   font-size: 14px;
-  display: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Visible state */
+.error.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* === Responsive Design for Mobile === */
@@ -120,7 +144,8 @@ ul {
     padding: 40px;
   }
 
-  html, body {
+  html,
+  body {
     font-size: 16px;
   }
 
