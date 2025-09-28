@@ -55,6 +55,8 @@ formSignUpElem.addEventListener("submit", function (event) {
     console.log("Form submission prevented due to validation errors.");
   } else {
     console.log("Form submitted successfully!");
+     // Redirect to login page
+    window.location.href = "/html/logIn.html";
   }
 });
 

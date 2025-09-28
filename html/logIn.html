@@ -3,29 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignUp</title>
+    <title>LogIn</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <form class="log-in-form" id="logInForm">
-        <input
-          type="text"
-          class="input-field"
-          placeholder="Enter your name"
-          data-type="name"
-        />
-        <span class="error" id="idNameError">Invalid name</span>
+    <div class="outer-container">
+      <img src="/photos/navyLogo.png" class="navy-logo" >
+      <h1 class="title"> Hellenic Navy E-Reports</h1>
+      <h2 class="subtitle">Login  by SerNikos</h2>
+      <div class="container">
+        <form class="log-in-form" id="logInForm">
+          <label for="firstName">Username</label>
+          <input
+            type="text"
+            name="firstname"
+            class="input-field"
+            placeholder="Enter your name"
+            data-type="name"
+          />
+          <span class="error" id="idNameError">Invalid name</span>
 
-        <input
-          type="password"
-          class="input-field"
-          placeholder="Enter your password"
-          data-type="password"
-        />
-        <span class="error" id="idPasswordError">Invalid password</span>
-        <button type="submit">logIn</button>
-      </form>
+          <label for="firstName">Password</label>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Enter your password"
+            data-type="password"
+          />
+          <span class="error" id="idPasswordError">Invalid password</span>
+          <button type="submit">logIn</button>
+        </form>
+      </div>
     </div>
     <script src="/js/logIn.js"></script>
   </body>

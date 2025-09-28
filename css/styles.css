@@ -5,10 +5,11 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d1b2a; /* Dark navy */
+  background-color: #0a1a33; /* Dark navy blue like Hellenic navy's colors */
   color: #f8f9fa;
-  font-size: 18px; /* Slightly larger for readability */
+  font-size: 18px; 
 }
+
 
 /* === Utility === */
 ul {
@@ -72,63 +73,10 @@ ul {
 
 /* === Container (Centers the form) === */
 .container {
-  width: 100vw;
-  height: 100vh;
+  max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0d1b2a;
-}
-
-/* === Sign-Up Form === */
-.sign-up-form,
-.log-in-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 420px;
-  background-color: #1b263b; /* Deep navy */
-  padding: 60px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-
-.sign-up-form,
-.log-in-form {
-  background-color: #1b4332;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  padding: 14px;
-}
-
-button[type="submit"],
-button[type="submit"] {
-  border-radius: 5px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  padding: 14px;
-  font-size: 16px;
-  background-color: #ccc; /* gray out */
-  cursor: not-allowed; /* change cursor */
-  opacity: 0.6; /* fade */
-}
-
-.sign-up-form button[type="submit"]:hover {
-  background-color: #2d6a4f;
-}
-
-/* === Error messages === */
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 /* Visible state */
@@ -137,8 +85,138 @@ button[type="submit"] {
   visibility: visible;
 }
 
+.navy-logo{
+  height: 100px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.title{
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.subtitle{
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+label{
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 0.7px;
+}
+
+.log-in-form input, .sign-up-form input{
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #2b3a55;
+  border-radius: 6px;
+  background-color: #13294b;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+input.input-field::placeholder{
+   color: #888c99;
+}
+
+input:focus{
+  outline: none; /* we remove the default blue outline */
+  border: 1px solid #d4af37; /* gold border */
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.6); /* glowing effect */
+}
+
+
+/* === Sign-Up Form === */
+.sign-up-form,
+.log-in-form {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.4);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  padding: 40px;
+  margin: auto;
+}
+
+
+button[type="submit"] {
+  height: 48px;
+  width: 100%;
+  background-color: #d4af37;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a1a33;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #b9972e;
+  color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"] {
+    transition: transform 0.1s ease; /* smooth animation */
+}
+
+button[type="submit"]:active {
+    transform: scale(1.1); /* scale up by 10% on click */
+}
+
+/* === Error messages === */
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.outer-container {
+  display: flex;
+  flex-direction: column;      /* stack children vertically */
+  justify-content: center;      /* vertical centering */
+  align-items: center;          /* horizontal centering */
+  height: 100vh;               /* full viewport height */
+}
+
 /* === Responsive Design for Mobile === */
 @media (max-width: 480px) {
+
+  .container{
+    padding: 24px;
+  }
+
   .sign-up-form {
     width: 90%;
     padding: 40px;
@@ -159,3 +237,5 @@ button[type="submit"] {
     font-size: 15px;
   }
 }
+
+
