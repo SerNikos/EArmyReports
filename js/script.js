@@ -5,6 +5,7 @@ const listItemElem = document.querySelector("#reqList");
 
 // Add New Request Handler
 function addNewRequest() {
+  window.location.href = "/html/logIn.html";
   const inputValue = inputElement.value.trim();
 
   if (inputValue !== "") {
@@ -33,6 +34,8 @@ function addNewRequest() {
 
 // Event Listeners for New Request
 buttonElementNewReq.addEventListener("click", addNewRequest);
+
+
 inputElement.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     e.preventDefault(); // prevent form submission if inside a form

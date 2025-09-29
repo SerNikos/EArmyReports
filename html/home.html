@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-ArmyReports</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="container">
+        <form class="calendar-form" id="calendarForm">
+          
+          <label for="dateInput">Select Date</label>
+          <input 
+            name="date"  
+            type="date" 
+            class="date-input" 
+            id="dateInput" 
+            required
+          >
+
+          <label for="hoursNumber">Number of Hours (1-7)</label>
+          <input 
+            name="hours" 
+            type="number" 
+            class="hours-number" 
+            id="hoursNumber" 
+            min="1" 
+            max="7" 
+            placeholder="e.g. 3" 
+            required
+          >
+          
+          <label for="reasonDropdown">Reason</label>
+          <select 
+            name="reason" 
+            class="reason-dropdown" 
+            id="reasonDropdown" 
+            required
+          >
+            <option value="" disabled selected>Select a reason</option>
+            <option value="personal">Personal</option>
+            <option value="parent">Parent</option>
+            <option value="hospital">Hospital</option>
+          </select>
+
+          <button type="submit" id="btnNewRequest">Add Request</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
