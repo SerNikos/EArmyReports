@@ -5,7 +5,7 @@ const listItemElem = document.querySelector("#reqList");
 
 // Add New Request Handler
 function addNewRequest() {
-  window.location.href = "/html/logIn.html";
+
   const inputValue = inputElement.value.trim();
 
   if (inputValue !== "") {
@@ -38,7 +38,6 @@ buttonElementNewReq.addEventListener("click", addNewRequest);
 
 
 // navigation tabs
-
 const tabs = document.getElementById('tabsNav');
 console.log(tabs);
 
@@ -64,3 +63,9 @@ tabs.addEventListener('click', function(event) {
         contentToShow.classList.add('active');
     }
 });
+
+
+const signoutBtnElem = document.querySelector("#signoutBtn");
+signoutBtnElem.addEventListener("click", ()=>{
+  window.location.href = "html/logIn.html";
+})

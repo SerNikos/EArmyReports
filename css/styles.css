@@ -267,10 +267,6 @@ button[type="submit"]:active {
   color: #adb5bd;
 }
 
-/* Optional: hover effect */
-.calendar-form input:hover {
-  border-color: #d4af37;
-}
 
 .calendar-form .reason-dropdown {
   background-color: #2b3a55;
@@ -305,6 +301,22 @@ button[type="submit"]:active {
   border-color: #d4af37;
 }
 
+/* Hover effect */
+.log-in-form input:hover {
+  border-color: #d4af37;
+  transition: border-color 0.8s ease;
+}
+
+/* Hover effect */
+.sign-up-form input:hover {
+  border-color: #d4af37;
+  transition: border-color 0.8s ease;
+}
+
+/* Optional: hover effect */
+.calendar-form input:hover, .calendar-form .reason-dropdown:hover{
+  border-color: #d4af37;
+}
 
 /* Tab Navigation */
 .tab-nav {
@@ -324,7 +336,6 @@ button[type="submit"]:active {
   color: #adb5bd;
   background-color: #1e2a38;
   border: none;
-  transition: 0.2s ease;
 }
 
 .tab-nav .tab:hover {
@@ -343,4 +354,86 @@ button[type="submit"]:active {
 
 .content.active {
   display: block; /* only show active one */
+}
+
+.profile-image-preview{
+  width: 100px;
+  height: 100px;
+}
+
+.profile-image-preview:hover {
+  background-color: #1e2a38;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+
+
+
+/* profile */
+/* === Profile Section === */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e2a38;
+  border-radius: 12px;
+  padding: 30px;
+  width: 420px;
+  margin: 30px auto;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.4);
+}
+
+.profile-image-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d4af37; /* gold border */
+  transition: all 0.3s ease;
+}
+
+.profile-image-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.profile-change-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+.profile-description {
+  width: 100%;
+  min-height: 100px;
+  background-color: #13294b;
+  border: 1px solid #2b3a55;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.profile-description:focus {
+  border: 1px solid #d4af37;
+  outline: none;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+
+.signout-btn {
+  width: 100%;
+  margin-top: 12px;
 }

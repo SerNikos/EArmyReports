@@ -45,7 +45,9 @@ formSignUpElem.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log("Form submission prevented due to validation errors.");
   } else {
+    event.preventDefault();
     console.log("Form submitted successfully!");
+    window.location.href = "/html/home.html";
   }
 });
 
