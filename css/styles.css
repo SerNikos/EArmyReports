@@ -242,35 +242,105 @@ button[type="submit"]:active {
 
 /* Homepage */
 
-.container{
-  
+.calendar-form input {
+  background-color: #2b3a55;      /* darker input background */
+  color: #ffffff;                 /* text color */
+  border: 1px solid #2b3a55;      /* initial border same as bg */
+  border-radius: 6px;             /* rounded corners */
+  font-size: 16px;                /* readable text */
+  padding: 10px 12px;             /* inner spacing */
+  margin-bottom: 15px;            /* spacing between inputs */
+  width: 100%;                    /* fill parent width */
+  box-sizing: border-box;         /* include padding in width */
+  transition: all 0.2s ease;      /* smooth hover/focus transition */
 }
 
-.calendar-form{
-  background-color: #1e2a38;
+/* Focus effect */
+.calendar-form input:focus {
+  border: 2px solid #d4af37; /* golden border */
+  outline: none;
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.6);
+}
+
+/* Placeholder color */
+.calendar-form ::placeholder {
+  color: #adb5bd;
+}
+
+/* Optional: hover effect */
+.calendar-form input:hover {
+  border-color: #d4af37;
+}
+
+.calendar-form .reason-dropdown {
+  background-color: #2b3a55;
   color: #ffffff;
   border: 1px solid #2b3a55;
   border-radius: 6px;
   font-size: 16px;
-  padding: 12px;
-  margin-bottom: 20px;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none; /* removes default arrow */
+  transition: all 0.2s ease;
+}
+
+.calendar-form .reason-dropdown:focus {
+  border: 2px solid #d4af37;
+  outline: none;
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.6);
+}
 
 
-  width:300px;
-  height: auto;
-  padding: 24px;
+/* Focus effect */
+.calendar-form .reason-dropdown:focus {
+  border: 2px solid #d4af37;       /* golden border */
+  outline: none;
+  box-shadow: 0 0 4px rgba(212, 175, 55, 0.6);
+}
+
+/* Hover effect */
+.calendar-form .reason-dropdown:hover {
+  border-color: #d4af37;
+}
+
+
+/* Tab Navigation */
+.tab-nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #1e2a38; /* match form background */
+  border-bottom: 2px solid #2b3a55;
+  margin-bottom: 20px;
 }
 
-.calendar-form input:focus {
-  border: 2px solid #d4af37; /* golden border */
-  outline: none; /* remove default focus outline */
-  box-shadow: 0 0 4px rgba(212, 175, 55, 0.6); /* subtle glow */
-  transition: 0.2s ease; /* smooth effect */
-}
-
-.calendar-form ::placeholder{
+ .tab {
+  flex: 1;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
   color: #adb5bd;
+  background-color: #1e2a38;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.tab-nav .tab:hover {
+  background-color: #2b3a55;
+}
+
+.tab.active {
+  color: #d4af37;
+  border-bottom: 3px solid #d4af37;
+  background-color: #1e2a38;
+}
+
+.content {
+  display: none; /* hide all contents by default */
+}
+
+.content.active {
+  display: block; /* only show active one */
 }

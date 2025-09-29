@@ -7,46 +7,59 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    
+<!-- Tab Navigation -->
+<div class="tab-nav" id="tabsNav">
+  <button class="tab active" data-content="content1">Request</button>
+  <button class="tab" data-content="content2">My Profile</button>
+</div>
+
     <div class="outer-container">
-      <div class="container">
-        <form class="calendar-form" id="calendarForm">
-          
-          <label for="dateInput">Select Date</label>
-          <input 
-            name="date"  
-            type="date" 
-            class="date-input" 
-            id="dateInput" 
-            required
-          >
+      <div class="content active" id="content1">
+        <h1 class="title">Pick Date and Hours</h1>
+        <h2 class="subtitle">add an absence request</h2>
+        <div class="container">
+          <form class="calendar-form" id="calendarForm">
+            
+            <label for="dateInput">Select Date</label>
+            <input 
+              name="date"  
+              type="date" 
+              class="date-input" 
+              id="dateInput" 
+              required
+            >
 
-          <label for="hoursNumber">Number of Hours (1-7)</label>
-          <input 
-            name="hours" 
-            type="number" 
-            class="hours-number" 
-            id="hoursNumber" 
-            min="1" 
-            max="7" 
-            placeholder="e.g. 3" 
-            required
-          >
-          
-          <label for="reasonDropdown">Reason</label>
-          <select 
-            name="reason" 
-            class="reason-dropdown" 
-            id="reasonDropdown" 
-            required
-          >
-            <option value="" disabled selected>Select a reason</option>
-            <option value="personal">Personal</option>
-            <option value="parent">Parent</option>
-            <option value="hospital">Hospital</option>
-          </select>
+            <label for="hoursNumber">Number of Hours (1-7)</label>
+            <input 
+              name="hours" 
+              type="number" 
+              class="hours-number" 
+              id="hoursNumber" 
+              min="1" 
+              max="7" 
+              placeholder="e.g. 3" 
+              required
+            >
+            
+            <label for="reasonDropdown">Reason</label>
+            <select 
+              name="reason" 
+              class="reason-dropdown" 
+              id="reasonDropdown" 
+              required>
+              <option value="" disabled selected>Select a reason</option>
+              <option value="personal">Personal</option>
+              <option value="parent">Parent</option>
+              <option value="hospital">Hospital</option>
+            </select>
 
-          <button type="submit" id="btnNewRequest">Add Request</button>
-        </form>
+            <button type="submit" id="btnNewRequest">Add Request</button>
+          </form>
+        </div>
+      </div>
+      <div class="content" id="content2">
+        This is page 2!
       </div>
     </div>
     <script src="/js/script.js"></script>

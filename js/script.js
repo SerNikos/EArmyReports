@@ -36,17 +36,31 @@ function addNewRequest() {
 buttonElementNewReq.addEventListener("click", addNewRequest);
 
 
-inputElement.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    e.preventDefault(); // prevent form submission if inside a form
-    addNewRequest();
-  }
-});
 
-// Theme Toggle
-const bodyElement = document.querySelector("body");
-const buttonElementTheme = document.querySelector("#btnTheme");
+// navigation tabs
 
-buttonElementTheme.addEventListener("click", () => {
-  bodyElement.classList.toggle("dark");
+const tabs = document.getElementById('tabsNav');
+console.log(tabs);
+
+// Event Delegation: Add a click event listener to the parent .dropdown-menu container
+tabs.addEventListener('click', function(event) {
+    // Check if the clicked element is a tab
+    if (event.target.classList.contains('tab')) {
+        const activeTab = document.querySelector('.tab.active');
+        const activeContent = document.querySelector('.content.active');
+
+        // Remove active classes from current active tab and content
+        if (activeTab)
+            activeTab.classList.remove('active');
+        if (activeContent)
+            activeContent.classList.remove('active');
+
+        // Add active class to the clicked tab
+        event.target.classList.add('active');
+
+        // Show the associated content
+        const contentId = event.target.getAttribute('data-content');
+        const contentToShow = document.getElementById(contentId);
+        contentToShow.classList.add('active');
+    }
 });
