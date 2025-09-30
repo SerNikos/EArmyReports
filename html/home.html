@@ -62,18 +62,20 @@
         <div class="profile-container">
           <!-- Profile Image Upload -->
           <label for="profileImageInput" class="profile-image-label">
-          <img class="profile-image-preview" id="profileImagePreview" 
-              src="/photos/profileImage.png" 
-              alt="Profile Photo" />
-          <p>Click to change photo</p>
+            <img class="profile-image-preview" id="profileImagePreview" 
+                src="/photos/profileImage.png" 
+                alt="Profile Photo" />
+            <p>Click to change photo</p>
           </label>
+          
+          <!-- Hidden file input -->
           <input type="file" id="profileImageInput" accept="image/*" style="display: none;" />
 
           <!-- Profile Description -->
           <textarea class="profile-description" placeholder="Write something about yourself..."></textarea>
 
           <!-- Sign Out Button -->
-          <button class="signout-btn" id="signoutBtn" type="submit"> Sign Out </button>
+          <button class="signout-btn" id="signoutBtn" type="submit">Sign Out</button>
         </div>
       </div>
     </div>

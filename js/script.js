@@ -67,5 +67,23 @@ tabs.addEventListener('click', function(event) {
 
 const signoutBtnElem = document.querySelector("#signoutBtn");
 signoutBtnElem.addEventListener("click", ()=>{
-  window.location.href = "html/logIn.html";
+  window.location.href = "logIn.html";
 })
+
+
+//profile file chooser
+
+ const fileInput = document.getElementById("profileImageInput");
+  const previewImg = document.getElementById("profileImagePreview");
+
+  // When a file is chosen -> show preview
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        previewImg.src = e.target.result; // Update the preview image
+      };
+      reader.readAsDataURL(file);
+    }
+  });
