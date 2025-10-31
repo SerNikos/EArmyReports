@@ -210,36 +210,6 @@ button[type="submit"]:active, .signout-btn:active{
   height: 100vh;               /* full viewport height */
 }
 
-/* === Responsive Design for Mobile === */
-@media (max-width: 480px) {
-
-  .container{
-    padding: 24px;
-  }
-
-  .sign-up-form {
-    width: 90%;
-    padding: 40px;
-  }
-
-  html,
-  body {
-    font-size: 16px;
-  }
-
-  .btn {
-    font-size: 15px;
-    padding: 12px;
-  }
-
-  .input-field {
-    padding: 12px;
-    font-size: 15px;
-  }
-}
-
-
-
 /* Homepage */
 
 .calendar-form input {
@@ -451,6 +421,34 @@ button[type="submit"]:active, .signout-btn:active{
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* === Responsive Design for Mobile === */
+@media (max-width: 480px) {
+
+  .container{
+    padding: 24px;
+  }
+
+  .sign-up-form {
+    width: 90%;
+    padding: 40px;
+  }
+
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .input-field {
+    padding: 12px;
+    font-size: 15px;
+  }
 }
 
 
